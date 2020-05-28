@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withGoogleMap, GoogleMap, withScriptjs, Marker } from "react-google-maps";
-import Autocomplete from 'react-google-autocomplete';
 import Geocode from "react-geocode";
+import { Searcher } from '../Searcher/Searcher';
 
 const API_KEY = 'AIzaSyB4okjTTnndv_nqIU75IB54R2PZFfy1tVw';
 console.log(API_KEY)
@@ -53,8 +53,7 @@ class Map extends Component {
 						<Marker google={this.props.google}
 							position={{ lat: this.state.markerPosition.lat, lng: this.state.markerPosition.lng }}
 						/>
-						<Autocomplete
-							className="searcher"
+						<Searcher
 							onPlaceSelected={this.onPlaceSelected}
 							types={['(regions)']}
 						/>
