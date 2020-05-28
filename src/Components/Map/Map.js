@@ -56,8 +56,10 @@ class connectedMap extends Component {
 						defaultZoom={this.props.zoom}
 						defaultCenter={{ lat: this.state.mapPosition.lat, lng: this.state.mapPosition.lng }}
 					>
-						{this.props.markers.map(marker =>
-							<Marker google={this.props.google}
+						{this.props.markers.map((marker, i) =>
+							<Marker
+								key={i}
+								google={this.props.google}
 								draggable={false}
 								position={{ lat: marker.lat, lng: marker.lng }}
 							/>
