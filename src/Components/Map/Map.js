@@ -6,7 +6,6 @@ import { connect } from "react-redux";
 import { addMarker } from '../../actions';
 
 const API_KEY = 'AIzaSyB4okjTTnndv_nqIU75IB54R2PZFfy1tVw';
-console.log(API_KEY)
 Geocode.setApiKey(API_KEY);
 
 const mapStateToProps = state => {
