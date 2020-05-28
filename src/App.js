@@ -9,7 +9,7 @@ class App extends Component {
         google={this.props.google}
         center={{ lat: 41.3922909, lng: 2.1655837 }}
         height='100vh'
-        zoom={15}
+        zoom={10}
       />
     );
   }
